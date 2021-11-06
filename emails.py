@@ -15,7 +15,7 @@ username = ' '
 password = ' '
 mail_title = ' '
 
-start_school = ""
+start_school = " " # 开学时间
 week = account_time.account_week(start_school)
 day = account_time.account_day()
 news = '\n'.join(remain.text(week, day, data))
