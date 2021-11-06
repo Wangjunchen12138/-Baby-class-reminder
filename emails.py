@@ -6,14 +6,14 @@ from remain import data
 from remain import remain
 
 # 发件人和收件人
-sender = ''
-receiver = ''
+sender = ' '
+receiver = ' '
 # 所使用的用来发送邮件的SMTP服务器
-smtpServer = 'smtp.163.com'
+smtpServer = ' '
 # 发送邮箱的用户名和授权码（不是登录邮箱的密码）
-username = ''
-password = ''
-mail_title = '宝宝今天的课程'
+username = ' '
+password = ' '
+mail_title = ' '
 
 start_school = ""
 week = account_time.account_week(start_school)
