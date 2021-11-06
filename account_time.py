@@ -7,7 +7,7 @@ class Account_time:
         date2 = datetime.datetime.now().timetuple()
         start = datetime.datetime(start[0], start[1], start[2])
         date2 = datetime.datetime(date2[0], date2[1], date2[2])
-        differ = date2 - start  # 返回两个变量相差的值，就是相差天数
+        differ = date2 - start  
         weekth = differ // datetime.timedelta(days=7) + 1
         return weekth
 
