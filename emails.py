@@ -26,18 +26,17 @@ message['From'] = sender  # 邮件上显示的发件人
 message['To'] = ','.join(receiver) # 邮件上显示的收件人
 message['Subject'] = Header(mail_title, 'utf-8')  # 邮件主题
 
-def running():
-    try:
-        smtp = smtplib.SMTP()  # 创建一个连接
-        smtp.connect(smtpServer)  # 连接发送邮件的服务器
-        smtp.login(username, password)  # 登录服务器
-        for name in receiver:
-            smtp.sendmail(sender, name, message.as_string())  # 填入邮件的相关信息并发送
-        print("邮件发送成功！！！")
-        smtp.quit()
-        exit()
-    except smtplib.SMTPException:
-        print("邮件发送失败！！！")
-        exit()
+class Emails:
+    def running(self):
+        try:
+            smtp = smtplib.SMTP()  # 创建一个连接
+            smtp.connect(smtpServer)  # 连接发送邮件的服务器
+            smtp.login(username, password)  # 登录服务器
+            for name in receiver:
+                smtp.sendmail(sender, name, message.as_string())  # 填入邮件的相关信息并发送
+            print("邮件发送成功！！！")
+            smtp.quit()
+        except smtplib.SMTPException:
+            print("邮件发送失败！！！")
 
-running()
+Run = Emails()
