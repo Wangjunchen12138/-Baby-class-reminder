@@ -13,7 +13,7 @@ smtpServer = ' '
 # 发送邮箱的用户名和授权码（不是登录邮箱的密码）
 username = ' '
 password = ' '
-mail_title = ' '
+mail_title = ' '#邮件标题
 
 start_school = " " # 开学时间
 week = account_time.account_week(start_school)
